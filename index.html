@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracurriculars4U</title>
+    <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://gmygfxpd.formester.com/widget/popup.js" type="module"></script>
+  <style>
+    .custom-popup-button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        border-radius: 30px;
+        padding: 20px 30px;
+        font-size: 26px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;  /* Ensure button is above other elements */
+        z-index: 10;  /* Make sure it’s clickable above other elements */
+    }
+
+    .custom-popup-button:hover {
+        transform: scale(1.05);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-popup-button:active {
+        transform: scale(0.95);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* For larger screens, adjust the button size */
+    @media (min-width: 768px) {
+        .custom-popup-button {
+            font-size: 30px;  /* Increase font size on larger screens */
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="submit-opportunity.html">Submit Opportunity</a>
+        </div>
+        <div class="navbar-logo">
+            <span>EXTRACURRICULARS4U</span>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h1>Welcome to Extracurriculars4U</h1>
+        <p>A platform dedicated to helping students discover the best extracurricular and volunteer opportunities tailored to their skills, interests, and schedules.</p>
+        
+        <!-- Custom Popup Button -->
+        <button class="custom-popup-button" onclick="Formester.openPopup('827c6ad1-c0c9-4662-8fbf-cd9b05818a71')">
+            QUIZ
+        </button>
+    </div>
+
+    <!-- Formester Popup -->
+    <formester-popup
+        id="827c6ad1-c0c9-4662-8fbf-cd9b05818a71"
+        url="https://gmygfxpd.formester.com/f/827c6ad1-c0c9-4662-8fbf-cd9b05818a71"
+        width="900px"
+        height="90%">
+    </formester-popup>
+ <!-- How It Works Section -->
+    <div class="how-it-works">
+        <div class="how-it-works-content">
+            <h2>How It Works</h2>
+            <ul>
+                <li><strong>Interest & Skills:</strong> Tell us what you're passionate about, and we'll suggest opportunities that align with your talents.</li>
+                <li><strong>Eligibility:</strong> Every recommendation matches your grade level and qualifications.</li>
+                <li><strong>Time Commitment:</strong> We offer flexible options to suit your schedule.</li>
+            </ul>
+            <p>We continuously update our database to provide you with the latest opportunities, so there’s always something new to explore!</p>
+        </div>
+        <div class="venn-diagram">
+            <svg width="300" height="300">
+                <circle cx="120" cy="150" r="80" fill="#add8e6" fill-opacity="0.5" />
+                <circle cx="180" cy="150" r="80" fill="#ffcccb" fill-opacity="0.5" />
+                <circle cx="150" cy="200" r="80" fill="#98fb98" fill-opacity="0.5" />
+                <text x="70" y="140" font-size="15" fill="black">Interests</text>
+                <text x="180" y="140" font-size="15" fill="black">Eligibility</text>
+                <text x="135" y="240" font-size="15" fill="black">Time</text>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
