@@ -1,74 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZFRNG1Z1C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-JZFRNG1Z1C');
-</script> <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracurriculars4U</title>
-    <link rel="stylesheet" href="styles.css">
-  
+<head>
+  <meta charset="UTF-8" />
+  <title>Extracurriculars4U</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://gmygfxpd.formester.com/widget/popup.js" type="module"></script>
   <style>
-    .custom-popup-button {
-        background-color: yellow;
-        color: black;
-        border: none;
-        border-radius: 30px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #fef9f6 0%, #fff 100%);
+      color: #2d2d2d;
+      line-height: 1.8;
+    }
+
+    .navbar {
+      background-color: #fff0e6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      color: #5e412f;
+      font-family: 'Inter', sans-serif;
+      border-bottom: 2px solid #f3d9c2;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .navbar-logo span {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .navbar-links a {
+      color: #5e412f;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      color: #c94f4f;
+    }
+
+    .section {
+      padding: 120px 40px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .welcome-section {
+      text-align: center;
+    }
+
+    .welcome-section h1 {
+      font-size: 48px;
+      margin-bottom: 3px;
+      color: #b07c6f;
+    }
+
+    .welcome-section p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .custom-popup-button,
+    .quiz-btn {
+      background-color: #f4c7ab;
+      color: #5e412f;
+      border: none;
+      border-radius: 30px;
+      padding: 16px 36px;
+      font-size: 20px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .custom-popup-button:hover,
+    .quiz-btn:hover {
+      background-color: #f0b894;
+      transform: scale(1.05);
+    }
+
+    .how-it-works {
+      margin-top: 3px;
+    }
+
+    .how-it-works h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: #b07c6f;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff9f7;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      flex: 1 1 250px;
+      max-width: 300px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #5e412f;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #3f3f3f;
+    }
+
+    .how-it-works p {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .venn-diagram {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .venn-diagram svg {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .submit-opportunity-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-opportunity-section h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #b07c6f;
+    }
+
+    .submit-opportunity-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer {
+      margin-top: 100px;
+      padding: 60px 20px;
+      background-color: #fff0e6;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      color: #5e412f;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #b07c6f;
+    }
+
+    .footer p a {
+      color: #5e412f;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
         padding: 20px 30px;
-        font-size: 26px;
-        cursor: pointer;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        position: relative;  /* Ensure button is above other elements */
-        z-index: 10;  /* Make sure it’s clickable above other elements */
+      }
+
+      .welcome-section h1 {
+        font-size: 32px;
+      }
+
+      .welcome-section p,
+      .how-it-works p,
+      .submit-opportunity-section p,
+      .footer p {
+        font-size: 16px;
+      }
+
+      .custom-popup-button,
+      .quiz-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+
+      .how-it-works h2,
+      .submit-opportunity-section h1 {
+        font-size: 28px;
+      }
+
+      .footer h3 {
+        font-size: 20px;
+      }
     }
-
-    .custom-popup-button:hover {
-        transform: scale(1.05);
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .custom-popup-button:active {
-        transform: scale(0.95);
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    /* For larger screens, adjust the button size */
-    @media (min-width: 768px) {
-        .custom-popup-button {
-            font-size: 30px;  /* Increase font size on larger screens */
-        }
-    }
-</style>
-
-
+  </style>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="navbar-links">
-            <a href="index.html">Home</a>
-            <a href="submit-opportunity.html">Submit Opportunity</a>
-        </div>
-        <div class="navbar-logo">
-            <span>EXTRACURRICULARS4U</span>
-        </div>
-    </div>
 
-    <!-- Welcome Section -->
-    <div class="welcome-section">
-        <h1>Welcome to Extracurriculars4U</h1>
-        <p>A platform dedicated to helping students discover the best extracurricular and volunteer opportunities tailored to their skills, interests, and schedules.</p>
-        
-        <!-- Custom Popup Button -->
-        <button class="custom-popup-button" onclick="Formester.openPopup('827c6ad1-c0c9-4662-8fbf-cd9b05818a71')">
+<body>
+  <div class="navbar">
+    <div class="navbar-logo">
+      <span>Extracurriculars4U</span>
+    </div>
+    <div class="navbar-links">
+      <a href="#">Home</a>
+      <a href="#submit">Submit Opportunity</a>
+    </div>
+  </div>
+
+  <div class="section welcome-section">
+    <h1>Welcome to Extracurriculars4U</h1>
+    <p>A platform dedicated to helping students discover the best extracurricular and volunteer opportunities tailored to their skills, interests, and schedules.</p>
+     <button class="custom-popup-button" onclick="Formester.openPopup('827c6ad1-c0c9-4662-8fbf-cd9b05818a71')">
             QUIZ
         </button>
     </div>
@@ -80,30 +254,63 @@
         width="900px"
         height="90%">
     </formester-popup>
- <!-- How It Works Section -->
-    <div class="how-it-works">
-        <div class="how-it-works-content">
-            <h2>How It Works</h2>
-            <ul>
-                <li><strong>Interest & Skills:</strong> Tell us what you're passionate about, and we'll suggest opportunities that align with your talents.</li>
-                <li><strong>Eligibility:</strong> Every recommendation matches your grade level and qualifications.</li>
-                <li><strong>Time Commitment:</strong> We offer flexible options to suit your schedule.</li>
-            </ul>
-            <p>We continuously update our database to provide you with the latest opportunities, so there’s always something new to explore!</p>
-        </div>
-        <div class="venn-diagram">
-            <svg width="300" height="300">
-                <circle cx="120" cy="150" r="80" fill="#add8e6" fill-opacity="0.5" />
-                <circle cx="180" cy="150" r="80" fill="#ffcccb" fill-opacity="0.5" />
-                <circle cx="150" cy="200" r="80" fill="#98fb98" fill-opacity="0.5" />
-                <text x="70" y="140" font-size="15" fill="black">Interests</text>
-                <text x="180" y="140" font-size="15" fill="black">Eligibility</text>
-                <text x="135" y="240" font-size="15" fill="black">Time</text>
-            </svg>
-        </div>
+  <div class="section how-it-works">
+    <h2>How It Works</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>✨ Interest & Skills</h3>
+        <p>Tell us what you're passionate about, and we'll suggest opportunities that align with your talents.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 Eligibility</h3>
+        <p>Every recommendation matches your grade level and qualifications.</p>
+      </div>
+      <div class="card">
+        <h3>⏳ Time Commitment</h3>
+        <p>We offer flexible options to suit your schedule.</p>
+      </div>
     </div>
+    <p>We continuously update our database to provide you with the latest opportunities, so there’s always something new to explore!</p>
+    <div class="venn-diagram" style="margin-top: 30px;">
+  <svg width="400" height="400">
+    <circle cx="150" cy="180" r="100" fill="#add8e6" fill-opacity="0.5" />
+    <circle cx="250" cy="180" r="100" fill="#ffcccb" fill-opacity="0.5" />
+    <circle cx="200" cy="260" r="100" fill="#98fb98" fill-opacity="0.5" />
+    <text x="95" y="170" font-size="18" fill="black">Interests</text>
+    <text x="260" y="170" font-size="18" fill="black">Eligibility</text>
+    <text x="175" y="300" font-size="18" fill="black">Time</text>
+  </svg>
+</div>
 
+  </div>
+
+  <div id="submit" class="section submit-opportunity-section">
+    <h1>Submit an Opportunity</h1>
+    <p>Do you know of an amazing extracurricular opportunity? Share it with us! Click the button below to submit it via our form.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6OxkCJ_9BPKhqZGFyPH44OCySzv2U2EWKqmqingYVIfYpxQ/viewform" target="_blank">
+      <button class="quiz-btn">Submit Opportunity</button>
+    </a>
+  </div>
+
+  <div class="footer">
+    <h3>Made with 💖 by Asmi</h3>
+    
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#submit"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
+
+
+
 
